@@ -8,7 +8,6 @@ export interface CrawlerConfig {
   timeout: number;
   maxRetries: number;
   retryDelay: number;
-  userAgentRotation: boolean;
   debug?: boolean;
 }
 

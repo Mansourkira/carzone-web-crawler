@@ -21,7 +21,6 @@ export function loadConfig(): CrawlerConfig {
         timeout: parseInt(process.env.TIMEOUT || '30000', 10),
         maxRetries: parseInt(process.env.MAX_RETRIES || '3', 10),
         retryDelay: parseInt(process.env.RETRY_DELAY || '2000', 10),
-        userAgentRotation: process.env.USER_AGENT_ROTATION === 'true',
         debug: process.env.DEBUG === 'true',
     };
 
