@@ -1,0 +1,33 @@
+{
+  "name": "carzone-web-crawler",
+  "version": "1.0.0",
+  "description": "Web crawler for carzone.ie to extract 200 listing pages",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "ts-node src/index.ts",
+    "clean": "rm -rf dist"
+  },
+  "keywords": [
+    "crawler",
+    "web-scraping",
+    "carzone"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.6.2",
+    "cheerio": "^1.0.0-rc.12",
+    "https-proxy-agent": "^7.0.2",
+    "http-proxy-agent": "^7.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
