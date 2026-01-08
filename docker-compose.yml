@@ -1,0 +1,23 @@
+services:
+  crawler:
+    build: .
+    image: carzone-crawler
+    container_name: carzone-crawler
+    volumes:
+      - ./output:/app/output
+    env_file:
+      - .env
+    environment:
+      # Proxy configuration (standard environment variables)
+      - HTTP_PROXY=${HTTP_PROXY:-}
+      - HTTPS_PROXY=${HTTPS_PROXY:-}
+      - PROXY_URL=${PROXY_URL:-}
+      # Crawler settings
+      - MAX_PAGES=${MAX_PAGES:-200}
+      - CRAWL_DELAY=${CRAWL_DELAY:-2000}
+      - TIMEOUT=${TIMEOUT:-30000}
+      - MAX_RETRIES=${MAX_RETRIES:-3}
+      - RETRY_DELAY=${RETRY_DELAY:-3000}
+      - OUTPUT_DIR=${OUTPUT_DIR:-/app/output}
+      - BASE_URL=${BASE_URL:-https://www.carzone.ie}
+      - DEBUG=${DEBUG:-false}
