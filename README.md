@@ -39,3 +39,7 @@ docker run -e HTTPS_PROXY=http://proxy.example.com:8080 -v ./output:/app/output 
    ```
 
 HTML files are written to the mounted output directory.
+## Notes
+
+The target website may block automated requests due to Cloudflare protection.
+
